@@ -1,0 +1,447 @@
+
+1. ゴリラ（アバタの見た目と入力動作の一致性)
+https://ieeexplore.ieee.org/abstract/document/11192101
+
+2. コウモリ（動物の入力動作において動物の選定理由は複数あるが，本稿では姿勢をpick up）
+https://ieeexplore.ieee.org/document/8848005
+
+3. 身体化の錯覚 (Embodiment Illusion)やプロテウス効果 (The Proteus Effect)
+[3] M. Gonzalez-Franco and J. Lanier, "Model of Illusions and Virtual Reality," Frontiers in Psychology, vol. 8, article 1125, Jun. 2017, doi: 10.3389/fpsyg.2017.01125.
+https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2017.01125/full
+
+VRの錯覚は、ボトムアップの多感覚処理、感覚運動的自己認識フレームワーク、およびトップダウンの予測操作という3つのプロセスの組み合わせによって説明できる神経科学的モデルが提案されている。
+
+ユーザーが能動的・自発的な運動実行を通じて頭や手足を動かし、脳内の予測状態が感覚入力（視覚、固有受容感覚、聴覚など）から得られる情報と一致したとき、強力なVRの錯覚が生じます。この錯覚の強さは、究極的には「私がこの行動の開始者であり源である」という、意志に関連した強力な主体感の意味合いに由来します。
+When users move their head or limbs, through active, voluntary motor execution, and the predicted state in their brain matches the information that arrives through the sensory afferent modalities (e.g., vision, proprioception, audio...), then there is a strong VR illusion. The strength of the illusion ultimately derives from the powerful agency implications related to volition: "I am the initiator or source of the action" (Haggard et al., 2002).
+
+これらの実験において、不一致な感覚入力は、予測された世界の状態を確認するために再調整または抑制されるようです。「私には予測がある、ゆえにこれが最終状態である」というわけです。……脳は、予測された結果への優先傾向を強化するために、計測（感覚入力）の方に誤りがあると「決定」することができるのです。これらのトップダウンの主体感メカニズムは、特定の状況下で遅延（最大200msまで）への許容度を高めることが示されており、VR体験にも影響を与えます。
+In these experiments, discordant afferent inputs are apparently recalibrated or suppressed in order to confirm a predicted state of the world (Haggard and Chambon, 2002): “I have a prediction, ergo this is my final state.” The illusion illustrated in such experiments is related to the illusions created in VR. The brain can “decide” that there is an error in measurement in order to reinforce a preference for a predicted outcome.
+These top-down agency mechanisms that have been shown to increase tolerance to latencies in certain settings (up to 200 ms; Haggard and Chambon, 2002), have implications to VR experiences.
+
+[4] M. V. Sanchez-Vives, B. Spanlang, A. Frisoli, M. Bergamasco and M. Slater, "Virtual Hand Illusion Induced by Visuomotor Correlations," PLOS ONE, vol. 5, no. 4, e10381, Apr. 2010, doi: 10.1371/journal.pone.0010381.
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0010381
+
+触覚刺激がなくても、視覚情報と運動（およびそれに伴う固有受容感覚）の同期だけで、バーチャルな身体に対する所有感は形成されます
+We conclude that synchrony between visual and proprioceptive information along with motor activity is able to induce an illusion of ownership over a virtual arm.
+
+5. SoAとSoOの独立性(見た目がどうであれ（所有感が低くても）、自分の動きと連動していれば主体感（SoA）は保たれる)
+
+例えば、参加者のバーチャルな手を不一致な物体に置き換えたとしても、リアルタイムの自発的な動きが保たれていれば、潜在的なSoAの指標は変化しないままである。
+For instance, replacing a participant’s virtual hand with an incongruent object but preserving real-time voluntary movement leaves implicit SoA measures unchanged
+
+参加者は、現実とバーチャルの動きの間の視覚運動整合性が保たれていれば、非身体的な物体に対してさえSoAを経験することができる。
+ participants can experience SoA even over non-corporeal objects if the visuomotor congruence between the real and the virtual movement is preserved
+
+これらの知見は、ターゲットを絞ったVR操作によってSoAとSoOが機能的に分離されうることを示している――例えば、身体の外見の変化は潜在的な主体感に影響を与えなかった。
+These findings demonstrate that SoA and SoO can be functionally dissociated through targeted VR manipulations—for example, changes in body appearance did not affect implicit agency.
+
+[5] M. Girondini, M. Mariano, G. Stanco, A. Gallace and L. Zapparoli, "Human bodies in virtual worlds: a systematic review of implicit sense of agency and ownership measured in immersive virtual reality environments," Frontiers in Human Neuroscience, vol. 19, article 1553574, 2025, doi: 10.3389/fnhum.2025.1553574.
+https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2025.1553574
+
+[6] Y. Tao, C. Y. Wang, A. D. Wilson, E. Ofek and M. Gonzalez-Franco, "Embodying Physics-Aware Avatars in Virtual Reality," in Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI '23), Association for Computing Machinery, New York, NY, USA, Article 254, pp. 1-15, 2023, doi: 10.1145/3544548.3580979.
+https://dl.acm.org/doi/10.1145/3544548.3580979
+
+↑システムを作成するにあたって立位の手の位置が地面から離れていても仮想空間のアバタが物理法則に従って地面に触れている方が自然だと主張するためのRef（認識相違ないかご指摘お願いします）
+
+ユーザーの動きとの「同期（1対1のマッピング）」を多少犠牲にしても、環境に対して物理的に正しく反応する（Plausibility：もっともらしさ？）方が、VR体験における身体性を向上させます
+We find that rather than compromising the sense of virtual body ownership, these types of small deviations improve the embodiment of users in VR.
+Rather, participants were able to accept a certain level of visual-proprioceptive mismatch in trade with behavioral realism of their virtual body when encountering physical impacts.
+
+物理対応アバターは、単なる身体認識（Body Awareness）だけでなく、周囲の環境との関係性（Environment Awareness）をユーザーに提供します。
+ Beyond focusing on factors determining “body awareness” (awareness of own physical body and skills for controlling bodies), physics correction introduces “environment awareness” (sense of the surroundings and skills for manipulating within the environment). Our finding showed that preserving environment awareness through physics-responsive self-avatar does not compromise body awareness but rather improves embodiment.
+
+
+7. VR空間内での移動手法として「その場歩き」を提案し、それがユーザーの「実在感」にどう影響するか
+
+https://dl.acm.org/doi/10.1145/210079.210084
+
+[7] M. Slater, M. Usoh and A. Steed, "Taking steps: the influence of a walking technique on presence in virtual reality," ACM Trans. Comput.-Hum. Interact., vol. 2, no. 3, pp. 201-219, Sept. 1995, doi: 10.1145/210079.210084.
+https://dl.acm.org/doi/10.1145/210079.210084
+
+この技術は、人間の体の動きから得られる固有受容情報とコンピューター生成ディスプレイからの感覚フィードバックとの一致が強ければ強いほど、仮想環境での存在感が増すという考えから生まれたものです。
+The technique is derived from the idea that presence in virtual environments may be enhanced the stronger the match between proprioceptive information from human body movements and sensory feedback from the computer-generated displays.
+（編集済み）
+
+8. バーチャル環境内での移動手法として、高価な歩行トラッキングシステムの代わりに、安価なウェアラブルデバイス「Myoアームバンド」を使った「腕振り移動」を提案
+[8] M. McCullough, H. Xu, J. Michelson, M. Jackoski, W. Pease, W. Cobb, W. Kalescky, J. Ladd and B. Williams, "Myo arm: swinging to explore a VE," in Proceedings of the ACM SIGGRAPH Symposium on Applied Perception (SAP '15), Association for Computing Machinery, New York, NY, USA, pp. 107-113, 2015, doi: 10.1145/2804408.2804416.
+https://dl.acm.org/doi/10.1145/2804408.2804416
+
+腕振り移動は、ジョイスティックよりも優れた空間認識を提供し、実際の歩行に近いパフォーマンスを安価かつ省スペースで実現できます。
+ We find that our arm swinging method outperforms the simple joystick and that spatial orientation is comparable to physically walking on foot. People made fewer errors if they explored the virtual environment physically or with Myo arm–swinging than with the joystick.
+
+9. 手を通じた非ヒューマノイド仮想アバターの身体化
+[9] Y. Jiang, Z. Li, M. He, D. Lindlbauer and Y. Yan, "HandAvatar: Embodying Non-Humanoid Virtual Avatars through Hands," in Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI '23), Association for Computing Machinery, New York, NY, USA, Article 309, pp. 1-17, 2023, doi: 10.1145/3544548.3581027.
+https://dl.acm.org/doi/full/10.1145/3544548.3581027
+
+我々は、ユーザーが手を使って非ヒューマノイドアバターを身体化できるようにするHandAvatarを提案する。HandAvatarは、自動生成された関節間マッピングの新しいアプローチを通じて、ユーザーの手の高い器用さと協調性を活用し、仮想アバターを制御する。
+ We propose HandAvatar to enable users to embody non-humanoid avatars using their hands. HandAvatar leverages the high dexterity and coordination of users’ hands to control virtual avatars, enabled through our novel approach for automatically-generated joint-to-joint mappings.
+
+10.  CGの専門知識がない一般ユーザーでも、Kinectのようなデプスカメラを使って現実世界の物体（椅子やランプなど）をスキャンし、それを自分の身体の動きと連動させてリアルタイムにアニメーション化できるシステム
+(9ではこの論文は全身で非人間アバタの操作をする行為は負荷が高いと言っている)
+https://dl.acm.org/doi/10.1145/2380116.2380171
+
+KinEtreは、初心者のユーザーが任意の物理的物体をスキャンし、数秒で命を吹き込むことを可能にします。この完全対話型システムにより、多様な静的メッシュを人間の全身を使ってアニメーション化できます。
+ KinEtre allows novice users to scan arbitrary physical objects and bring them to life in seconds. The fully interactive system allows diverse static meshes to be animated using the entire human body.
+（編集済み）
+
+11. バーチャルリアリティ（VR）環境におけるローイング（ボート漕ぎ）マシンを用いた移動、特に2D平面および3D空間での「操縦（Steering）」手法について調査
+https://dl.acm.org/doi/10.1145/3613904.3642192
+
+
+我々は、2Dおよび3D VR環境向けに、頭、手、足の動きに基づいた3つの操縦技術を実装した。
+ We implemented three steering techniques based on head, hands, and feet movements for 2D and 3D VR environments.
+
+12. VRにおける身体化感覚（Sense of Embodiment: SoE）の定義、構成要素、そしてその測定・評価手法に関する包括的なレビュー論文
+
+[12] M. Guy, J.-M. Normand, C. Jeunet-Kelway and G. Moreau, "The sense of embodiment in Virtual Reality and its assessment methods," Frontiers in Virtual Reality, vol. 4, 2023, doi: 10.3389/frvir.2023.1141683, ISSN: 2673-4192.
+https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2023.1141683
+
+身体化感覚（SoE）は3つの構成要素から成る：
+- 行為主体感（SoA）：自分の行動の原因であるという感覚
+- 身体所有感（SoBO）：仮想身体が自分の感覚の源であるという感覚
+- 自己位置感覚（SoSL）：身体の中にいるという空間的体験
+
+The SoE is characterised by three sub-components, defined as follows (Kilteni et al., 2012a). The sense of agency (SoA) is the feeling of being the cause of our actions. The sense of body ownership (SoBO) is the feeling that the virtual body is the source of our sensations (like our real body). Finally, the sense of self-location (SoSL) is the "spatial experience of being inside a body."
+
+VRにおいて「リアルタイム」かつ「タスクの邪魔にならない（double taskingを必要としない）」評価手法が最も重要である
+Notably, we argue that real-time measures of embodiment, which are also specific and do not require double tasking, are the most relevant in the context of virtual reality.
+
+13. VRを用いて「人間以外の動物になる」という体験が、ビデオ視聴と比較してどのように環境意識を変容させるかを検証したもの
+没入型仮想環境での動物の身体化は、自己への自然の包含と自然への関与を高める
+(四つん這いになって牛になったり，珊瑚になったりして受動的な刺激を受けると自己アイデンティティに影響があるかの論文)
+
+[13] S. J. Ahn, J. Bostick, E. Ogle, K. L. Nowak, K. T. McGillicuddy and J. N. Bailenson, "Experiencing Nature: Embodying Animals in Immersive Virtual Environments Increases Inclusion of Nature in Self and Involvement with Nature," Journal of Computer-Mediated Communication, vol. 21, no. 6, pp. 399-419, 2016, doi: 10.1111/jcc4.12173.
+https://doi.org/10.1111/jcc4.12173
+
+【実験概要】
+3つの実験（N=228）を通じて、IVE（没入型仮想環境）とビデオを比較し、動物の身体化が環境への関与を高めるかを検証した。
+
+【実験1（N=49）: 牛のアバター】
+参加者は四つん這いになり、牧草地で牛の視点を体験した。仮想空間で電気棒（cattle prod）で突かれると、床の振動と共に、実際に背中を突かれる触覚フィードバックが与えられた。
+ Participants got down on their hands and knees, and embodied a virtual shorthorn cow in a pasture... When the virtual cattle prod hit the cow in the virtual simulation, participants heard a buzzing noise, felt a vibration on the floor... and a confederate poked them in the back.
+
+結果: IVE条件はビデオ条件と比較して有意に高い空間的実在感（d=.69）、身体転送（d=.62）、INS（d=.86）を示した。並列媒介分析では、身体転送のみがIVE体験とINSの関係を媒介し、空間的実在感は媒介効果を示さなかった。
+
+【実験2（N=53）: サンゴのアバター】
+参加者はサンゴのアバターの中に入り込み、海洋酸性化によって自分の身体（サンゴ）が腐食し、手足（枝）が折れて海底に落ちていく様子を一人称視点で体験した。
+ Participants were instructed to look around the virtual world, step into the body of the coral avatar... Participants observed the consequences of ocean acidification and looked at their coral body corroding and its limbs breaking off.
+
+結果: 実験直後（Time 1）では空間的実在感と身体転送の両方がINSを媒介したが、1週間後（Time 2）には身体転送のみが媒介効果を維持した。
+
+【実験3（N=126）: サンゴのアバター（触覚フィードバックなし）】
+商業用HMDシステム（触覚フィードバックなし）でもIVEはビデオより高い空間的実在感（d=1.07）と身体転送（d=.72）を示した。身体転送のみがINSを媒介した。
+
+【主要な知見】
+身体転送」とは、人が仮想の身体を「自分の身体である」と感じる現実的な錯覚のことである。
+ Body transfer offers the realistic illusion of body ownership, that a person has become the virtual body.
+
+感覚豊かなVRでの身体化体験は、ビデオに比べ、高い身体化感覚、実在感、そして自然との相互接続感（INS）をもたらした。しかし、分析の結果、VR体験とINS（自己への自然の包含）の関係を媒介していたのは、「空間的実在感」ではなく「身体転送感（その体になった感覚）」のみであった。
+Embodying sensory-rich experiences of animals in IVEs led to greater feeling of embodiment, perception of being present in the virtual world, and interconnection between the self and nature compared to video.
+However, only body transfer mediated the relationship between exposure to IVEs and INS [Inclusion of Nature in Self].
+
+効果サイズは小〜中程度であり、単一のVR体験で劇的な変化が生じるわけではないことにも留意が必要。
+Although the effect sizes were small to moderate, findings suggest that embodied experiences in IVEs may be an effective tool to promote involvement with environmental issues.
+
+14. Kinectのようなモーションセンサーを使い、人間の動きで「人間以外のキャラクター（恐竜、クモ、魚など）」をリアルタイムに操作（パペトリー）するシステム
+https://dl.acm.org/doi/10.1145/2485895.2485903
+
+身体構造や動作パターンが人間と大きく異なる様々なクリーチャーを制御することを目指しています。
+ We aim to control a variety of creatures whose body structures and motion patterns can differ greatly from a human’s.
+
+人間型キャラクターの操作とは異なり、動物やクリーチャーは関節の数や構造（形態）が人間と異なるため、「人間のどの部位をクリーチャーのどの部位に対応させるか」という正解がありません。
+ irst, there is no unique answer to the question: which human body part corresponds to a specific anatomical feature of a target creature? As animals usually have a different morphology and number of degrees of freedom (DOFs) than those of a human, designing robust body part maps... is an ambiguous and non-trivial task.
+
+Direct Feature Mapping（直接特徴マッピング）
+我々の直接特徴マッピング手法は、様々な候補ペアの中から、最適な「人間-クリーチャー」間の身体の対応関係を選択します。
+ Our direct feature mapping method selects optimal human-creature body matches amongst a variety of candidate pairs.
+
+Motion Coupling (複雑な動きの制御)
+人間が物理的に真似できない動き（多足歩行や特徴的な移動など）については、あらかじめ用意されたアニメーションクリップを使用し、ユーザーの動きをトリガーとして再生・ブレンドします。
+We then use motion coupling of two different animation clips with the same length to translate a human’s mimicking motion into a creature’s characteristic motion, and introduce a robust motion classifier to identify which target motion the user is trying to mimic.
+
+我々は、市販のモーションセンシングデバイス（Kinect等）からの入力を用いて、様々な非人間クリーチャーをリアルタイムで制御するいくつかの自然なパペトリーの例を通じ、本アプローチの有効性を実証しました。
+ We demonstrate the effectiveness of our approach with several examples of natural puppetry, where a variety of non-human creatures are controlled in real-time using human motion input from a commodity motion sensing device.
+（編集済み）
+
+(1の引用論文で激アツでした)
+
+15. VRゲームにおいて騎士や魔法使いといった「ステレオタイプな人間型アバター」から脱却し、動物のアバターを使用することで、どのような新しい体験や没入感（IVBO: 仮想身体所有感）が得られるか
+
+我々は、仮想身体所有感（IVBO）が、人間型ではないアバターにおいて特に高く、かつ見過ごされている潜在能力を持っていると仮説を立てている。
+ We hypothesize that such an illusion of virtual body ownership (IVBO) has a particularly high, yet overlooked potential for nonhumanoid avatars.
+
+サイは四つん這い(角で障害物を動かす)，蠍は腰を動かす立位(尻尾を模倣)，鳥は立位で腕を振る(滑空を模倣)
+
+定量的評価により、追加の身体部位やそれに応じた超人的なスキルを含む、人間以外の形態を体現することから生じるゲームの楽しさが高いことが裏付けられた。
+ A quantitative evaluation underpins the high game enjoyment arising from embodying such nonhuman morphologies, including additional body parts and obtaining respective superhuman skills...
+
+さらに、実験ではIVBO（仮想身体所有感）とゲームの楽しさとの間に相関関係があることが明らかになった。
+Furthermore, the experiment reveals a correlation between IVBO and game enjoyment...
+
+必ずしもリアルな姿勢（例：四つん這い）である必要はなく、立位でサソリを操作するような「マッピング」でも十分に直感的で楽しめる。
+全身を見せる必要はないが、操作可能な部位（爪、翼、角など）を視界に入れることは重要である。
+
+
+
+
+(これも1の引用論文で激アツでした)
+
+16.VRアクションゲームにおいて、アバターの身体が「どの程度見えているか（可視性）」が、プレイヤーの体験やパフォーマンスにどう影響するか
+https://ieeexplore.ieee.org/document/8446229/
+
+
+多くのVRゲームは、消費者向けの全身モーションキャプチャデバイスが利用できないことや技術的な制約のため、ユーザーのアバターの部分的なデジタル表現しか提供していない。したがって、プレイヤーはしばしば、仮想世界での手の動きを再現する浮遊した仮想の手だけで表現される。
+The majority of VR games only provides a partial digital representation of the users’ avatars due to unavailable consumer-grade full-body motion capture devices and technological constraints. Thus, players are often just represented by floating virtual hands replicating their hand movements in the virtual world.
+
+3Dコントローラーのモデルとプレイヤーの胴体に取り付けられた盾のみ）。Low: 手と前腕のみが見える身体。Medium: 頭、首、胴体、前腕、手、および下半身部分の尾が見える身体。
+None: an invisible body (only models of the 3D controllers and a shield attached to the player’s torso). Low: a visible body but with only hands and forearms. Medium: a visible body with head, neck, trunk, forearms, hands, and tail for the lower body parts.
+
+ゲーム以外のVRコンテキストから予想される結果とは対照的に、我々の結果では、表示される身体部分が増えても有意な差は明らかにならなかった。
+In contrast to the expected outcome from non-game VR contexts, our results did not reveal significant differences with an avatar presenting an increasing number of visible body parts.
+
+身体所有感、没入感、感情的・認知的関与、および知覚される制御性や難易度は、より一貫性のある（完全な）仮想身体によって改善されることはなかった
+The body ownership, immersion, emotional and cognitive involvements as well as the perceived control and difficulty were not improved with a more coherent virtual body.
+
+動いているっぽいです
+全体のプレイエリアは3m×3m×2.5mの空間である。自由な動きのためにケーブルは天井に固定された。...また、プレイヤーはVRコントローラーを使って火の玉を投げたり...弾を避けるために歩いたり、身をかわしたり、しゃがんだりする。
+ The overall play area is a 3 x 3 x 2.5 meters volume. For a higher freedom of movement, cables were fixed to the ceiling... Also, the player utilizes the VR controllers to throw fireballs... walk, dodge and crouch to avoid projectiles
+
+「アバターの身体がしっかり表示されていれば、『自分の体だ』と強く感じ（所有感）、もっと激しく動き（運動量）、ゲームの成績も上がる（パフォーマンス）のではないか？」と考えて、これらを評価項目に設定しました。
+（しかし、結果としては「どこを見ているか」以外には大きな差が出なかった、というのがこの論文の面白い点です。）
+* 		身体所有感 (Virtual Body Ownership)
+* 		ゲーム体験 (Game Experience)
+* 		パフォーマンス (Performance)
+* 		運動量 (Physical Engagement)
+は変わらなかった
+「操作できること」の方が重要だった
+* 		見た目（所有感）よりも、「自分の思った通りに手が動くか（主体感／Agency）」の方が、ゲームにおいては圧倒的に重要だった。
+* 		手（コントローラー）の動きさえ完璧に同期していれば、脳はそれを「自分の体」として受け入れてしまうようです。
+ゲームに集中しすぎていた（フロー状態）
+* 		アクションゲームは敵を倒すことに必死になるため、「自分に足があるかどうか」なんて気にしている余裕がなかった
+* 		これを心理学用語で「フロー状態（没頭状態）」と呼び、自己認識が薄れるため、アバターの見た目の影響が消えてしまった可能性がある？
+ （編集済み） 
+
+(1の引用論文)
+
+17. 移動技術（Locomotion Technique）は、ユーザーの身体所有感（Sense of Embodiment）に影響を与えるか？
+アバターを所有することは、移動技術に応じたユーザーの好みやパフォーマンスに影響を与えるか？
+https://dl.acm.org/doi/10.1145/2967934.2968105
+
+移動技術はユーザーの身体所有感に影響を与えるか？
+Does the locomotion technique have an impact on the user's sense of embodiment?
+
+アバターを所有することは、移動技術に応じたユーザーの好みやパフォーマンスに影響を与えるか？
+Does embodying an avatar have an impact on the user's preference and performance depending on the locomotion technique?
+
+これらの問いに取り組むため、我々は一人称視点で見える仮想アバターに対する移動技術とユーザーの身体所有感との関係を探るユーザー調査（N=60）を実施した。
+ To address these questions, we conducted a user study (N=60) exploring the relationship between the locomotion technique and the user's sense of embodiment over a virtual avatar seen from a first-person perspective.
+
+結果として、アバターを身体化している場合、どの技術を用いても参加者は同程度の身体所有感を持っており、また仮想アバターの有無は、技術に関係なく、ナビゲーション中のパフォーマンスを変化させないことが示された。
+The results show that participants had a comparable sense of embodiment with all techniques when embodied in an avatar, and that the presence or absence of the virtual avatar did not alter their performance while navigating, independently of the technique.
+
+18. 倉庫やスタジアムのような広大なスペース（Wide-area）を利用したVR体験（ロケーションベースVR）において、「実際に自分の足で歩く（Natural Walking）」ことと、一般的な「テレポート移動」が、ユーザーの没入感、VR酔い、空間認識にどのような影響を与えるかを比較
+
+本研究では、広大な物理空間での自然な歩行がプレゼンス（実在感）とユーザーの好みに与える影響を理解するための初のVR研究を提示する。我々は、家庭用VRで最も一般的に使用される移動技術であるテレポートと、同じ広大な空間において比較を行った。
+In this work, we present the first VR study to understand the impact of natural walking in a large physical space on presence and user preference. We compare it with teleportation in the same large space, since teleportation is the most commonly used locomotion technique for consumer, at-home VR.
+圧倒的多数の参加者が、テレポートよりも「実際に歩く」方を好みました。
+In the post study survey, none of the participants reported a preference for teleportation over walking: 15 preferred walking, 1 did not answer.
+
+技術的な課題（トラッキングの安定性など）さえ解決できれば、「自然な歩行」は「テレポート」よりもユーザー体験として優れており、かつVR酔いも少ないことが示されました。
+Our results indicate decided advantages of natural walking over teleportation in wide-area VR in terms of user preference and induced disorientation with some indications of better mental map formation.
+
+自由で自然な移動は大事だと言っている(クマのオープンワールドでの移動で使えそう)
+19:17
+19. 一般的な4つのコントローラーベースの移動手法を比較し、不快感や楽しさにどう影響するかを明らかにする
+(従来はコントローラで移動しているのが主流だったとIntroで書こうかと思います)
+https://dl.acm.org/doi/10.1145/3102071.3102082
+
+20. (18っぽい内容ですが)現在のVRで主要な3つの移動（ロコモーション）手法を、ユーザーエクスペリエンス（UX）の観点から比較評価
+https://ieeexplore.ieee.org/document/10458379
+
+VR技術の復活（「VRの新時代」）に伴い、移動手法も進化しましたが、既存の主要な手法を体系的に比較した研究は不足していました。本研究では、ユーザー体験（UX）、ユーザビリティ、没入感などを中心に、主要な3つの手法を実証的に評価
+In this era, well-established, prevalent VR locomotion techniques are mostly used as points of comparison for benchmarking of new VR locomotion designs. At the same time, there is the need for more exploratory, comparative studies of contemporary VR locomotion techniques...
+The goal of this work is to examine the user experience (UX) of these VR locomotion techniques, as well as related factors, such as usability and technical performance.
+
+① Walking-in-Place (WIP / その場歩き)
+ユーザーがその場で足踏みをすることで、VR空間内を移動する手法です。
+② Controller/Joystick (コントローラー/ジョイスティック)
+コントローラーのトラックパッドやスティックを使用して、滑らかに移動する手法です。
+③ Teleportation (テレポート)
+移動したい場所をポイントし、瞬時にその場所へ視点を移動させる手法です（移動の連続性がない）。
+(i) Walking-in-place: the user performs virtual locomotion by walking-in-place, i.e., using step-like movements while remaining stationary." "(ii) Controller/joystick: the user uses a controller to direct the movement in the virtual environment." "(iii) Teleportation: the user points to where he/she wants to be in the virtual world, and the virtual viewpoint is instantaneously teleported to that position.
+
+結論
+どの手法も一長一短があり、万能な解決策はありません。
+
+* 		WIP: 高い没入感が求められるが、身体的負荷が許容される（例：フィットネス）場合に適している。
+* 		Controller: 既存ゲーマー等に親和性が高く、バランスの取れた手法。
+* 		Teleportation: 効率性と酔いの少なさを重視する場合に適しているが、没入感は犠牲になる。
+（編集済み）
+
+(1の引用です)
+21. 複雑な環境での移動において、本当に3PPが有効なのかを検証
+(結果を使うというよりは3人称か1人称かの議論はある)
+https://dl.acm.org/doi/10.1145/3281505.3281511
+
+実際、研究者たちは、ユーザーの「存在感（プレゼンス）」や「空間認識」が仮想的な身体表現に強く影響されること、そして自身の解剖学的構造を持つアバター（自己身体化表現）を使用することで体験がより魅力的になることを示してきました。
+Indeed, researchers have shown that users’ feeling of presence and spatial awareness are highly influenced by their virtual representations, and that self-embodied representations (avatars) of their anatomy can make the experience more engaging.
+
+その一方で、最近のユーザー研究では、空間認識を向上させるために、自分の体を「三人称視点（Third-Person Perspective）」で見ることへの嗜好が示されています。
+On the other hand, recent user studies show a penchant towards a third-person view of one’s own body to seemingly improve spatial awareness.
+
+しかし、我々はその不自然さゆえに、VRでのタスク実行において、三人称視点は一人称視点（First-Person Perspective）ほど効果的でも便利でもないと考えます。
+However, due to its unnaturality, we argue that a third-person perspective is not as effective or convenient as a first-person view for task execution in VR.
+
+その結果、三人称視点がリアルな表現（点群）と組み合わされたときのみ、一人称視点と同様の身体所有感と空間認識が得られることがわかりました。それ以外のすべてのケースでは、アバターの表現に関わらず、ナビゲーションタスクには依然として一人称視点の方が適していることが示されました。
+Our results show that only when a third-person perspective is coupled with a realistic representation, a similar sense of embodiment and spatial awareness is felt. In all other cases, a first-person perspective is still better suited for navigation tasks, regardless of representation.
+（編集済み）
+
+22. VR技術を使って「人間以外の存在（木）」になる体験が、人の自然に対する親近感や意識にどのような影響を与えるかを検証
+(非人間形アバタの定義は動物だけでなく植物にもある点を述べるのに引用できそう)
+https://www.nature.com/articles/s41598-022-05184-0
+
+植物や動物などの人間以外の存在を身体化することによって自然との関連性を高めるために、没入型バーチャルリアリティ（iVR）技術を使用する可能性についての研究は、まだ疎らである。
+The potential of using immersive virtual reality (iVR) technologies to enhance nature relatedness by embodying non-human beings, such as plants or animals, is only sparsely researched.
+
+したがって、本研究の目的は、iVRを通じて木の身体化を経験することが、a) 没入感、b) 自然との関連性、c) 視点取得、d) 人間と自然の関係についての省察、を促進するかどうかを調査することであった。
+Thus, the aim of our study was to investigate whether experiencing the embodiment of a tree via iVR fosters a) a feeling of immersion, b) relatedness with nature, c) perspective-taking, and d) reflection on the relationship between humankind and nature.
+
+参加者は4つの条件（iVR 対 ビデオ視聴、ポジティブな結末(最後森林火災に遭わない) 対 ネガティブな結末(最後森林火災に遭う)(森林のライフサイクルを体験するという実験のようです)）のいずれかにランダムに割り当てられた。
+Participants were randomly assigned to one of four conditions (iVR vs. video watching; positive vs. negative ending).
+
+体験は一人称視点で表示され、木であるかのような印象を与える。
+The experience is displayed from a first-person point of view, giving the impression of being the tree.
+
+我々の結果は、条件の割り当てに関わらず、参加者が体験に没入していると感じるほど、自然との関連性のレベルが高まったと報告することを示した。
+Our results showed that irrespective of condition allocation, the more immersed participants felt in their experience, the greater they reported increased levels of nature relatedness (r = 0.42, p < .05).
+
+結論
+没入感について: VRグループの方がビデオグループより高く評価されました。
+自然との関連性について: VRという「手段」自体が直接数値を上げたわけではなく、「どれだけ没入できたか」が鍵でした。
+
+
+
+
+
+23.8〜12歳の子供と成人を対象に、VR空間での「フルボディ錯覚（Full Body Illusion）」に対する反応の違いを調査しました。特に、「動きの同期（視覚運動同期）」と「アバターの外見（人間らしさ）」が、身体所有感（Ownership）と運動主体感（Agency）にどう影響するかを検証
+
+https://osf.io/preprints/psyarxiv/2raq7_v1
+
+We assessed children’s and adult’s subjective and physiological responses to a first-person perspective full body illusion in virtual reality, manipulating appearance and visuomotor synchrony.
+
+この体は自分のものだ」という感覚については、子供も大人も同様の傾向を示しました。動きが遅れる（非同期）ほど、また外見が人間らしくない（骸骨）ほど、所有感は減少しました。
+Children and adults reported similar subjective ownership, which was reduced with increasing asynchrony and less human visual similarity, but not reflected in objective measures
+
+大人は動きの遅延や外見の違いによって主体感が大きく下がりましたが、子供はそれらの悪条件（遅延や骸骨アバター）の影響を受けにくく、主体感が維持される傾向がありました。
+Overall, children experienced more agency than adults, which was also less affected by increasing asynchrony or avatar appearance than in adults.
+
+24. 没入型バーチャルリアリティ（VR）において、アバターの顔がユーザー自身の顔と似ているかどうかが、ユーザーの「身体所有感（Embodiment）」と「実在感（Presence）」にどのような影響を与えるかを調査
+(外見の派内はしないが一致性大事に繋げられるかな？)
+https://www.mdpi.com/2079-9292/12/3/583
+
+アバターの顔とユーザーの顔の類似性が身体所有感と実在感にどのように影響するかについての研究は不足している。
+research on how the similarity between an avatar’s face and the user’s face affects embodiment and presence is lacking.
+
+我々は、アバターの外見におけるリアリズムと類似性が身体所有感にとって重要であり、身体所有感と実在感の両方が没入型VRユーザー体験に寄与する絡み合った要因であると結論付ける。
+We conclude that the realism and similarity in an avatar’s appearance is important for embodiment, and that both embodiment and presence are intertwined factors contributing to immersive VR user experience.
+
+Future immersive VR system developers and metaverse researchers can promote embodiment through body ownership—and, to a certain extent, presence—by allowing the user to construct an avatar based on their own face.
+将来の没入型VRシステム開発者やメタバース研究者は、ユーザーが自分の顔に基づいてアバターを構築できるようにすることで、身体所有感を通じたEmbodiment、そしてある程度はPresenceを促進することができる。
+
+25. 非人間的なアバターはプロテウス効果を引き起こせるか？
+
+https://www.sciencedirect.com/science/article/pii/S2949882123000208?via%3Dihub
+
+仮想環境において、人々は自分が体現（エンボディ）しているバーチャルアバターの特徴に沿った行動をとる傾向があります。
+In virtual environments, people tend to behave in line with the virtual avatars they embody.
+
+参加者は、魅力度の異なる2つの非人間型アバター（魅力的 vs 魅力的でない）のいずれか、および2つの身体化レベル（ヘッドマウントディスプレイ使用のVR vs デスクトップ画面）のいずれかにランダムに割り当てられました。
+Participants were randomly assigned to one of two non-humanlike avatars differing in level of attractiveness (attractive vs. unattractive) and one of two levels of embodiment (head-mounted display VR vs. desktop).
+
+結果として、魅力的な非人間型アバターを体現した参加者は、自己類似性（自分と似ていると感じること）を通じた「アバターへの同一視」をより高く知覚し、それが社会的参加を増加させることが示されました。
+The results showed that participants embodying the attractive non-humanlike avatar perceived higher levels of avatar identification via self-similarity, which increased social participation.
+23:09
+26. ユーザーがVRを通じてアデリーペンギンになる体験（身体化）が、学習効果や動物への共感にどのような影響を与えるか
+
+https://dl.acm.org/doi/10.1145/3611659.3617211
+
+インフォーマル・ラーニング（学校外での学習）を促進するために、ユーザーがアデリーペンギンになりきるナラティブベースのVRアプリケーション「Waddle」を紹介しています。この体験が、学習および「共感（empathy）」にどのような効果をもたらすかを検証しました。
+This paper presents, Waddle, a virtual experience to promote informal learning by embodying the user as an Adélie Penguin to partake in a narrative-based virtual reality application that shares the story of the lives of these unique animals." "We test the effects of this experience on informal learning and empathy, an important component for fostering social engagement with ecology.
+
+VRでの「身体化（自分がペンギンであるという感覚）」の強さと、体験後の共感度には有意な相関関係が見られた。
+The virtual experience did show gains in learning as shown in Figure 2." "A significant change was between the empathy ratings pre-experience (M = 0.85 , SD = 1.20) and the ratings post-experience (M = 1.65 , SD = 1.36) t(40) = -2.95, p = 0.005." "A significant correlation was also found between the embodiment and the post-experience empathy ratings, r(39) = 0.53, p<.001...
+
+この研究は、人間以外のキャラクター（ペンギン）への身体化がVR内で可能であり、それが「共感」の有意な変化と「インフォーマル・ラーニング」へのポジティブな影響をもたらすことを実証しました。
+This research indicate that direct embodiment of a penguin may be possible in VR..." "Additionally, this research demonstrates that the developed virtual experience is able to provide a significant change in empathy and a positive impact on informal learning." "...virtual embodiment of non-human characters may provide a powerful tool for both education and appreciation of other creatures.
+
+27. VRにおけるアバターと環境の適合性が、もっともらしさ（Plausibility）、身体化（Embodiment）、プレゼンス、およびプロテウス効果に与える影響
+(クマがいるのは草原であるべきというときに引用できそう)
+
+https://ieeexplore.ieee.org/document/10049676
+
+結果として、アバターと環境が一致している（適合している）場合、シミュレーションの**「もっともらしさ（Plausibility）」**、特に外的整合性（External Plausibility / 自分の知識や期待と一致しているか）の評価が有意に高まることがわかりました。違和感なく体験に入り込むには、文脈の一致が重要であることを示しています。
+Results show that congruence significantly increased the perceived plausibility of the simulation, specifically the external plausibility.
+
+予想に反して、環境の違いは「プロテウス効果」を変化させませんでした。 具体的には、フォーマルなアバター（スーツ）を着た参加者は、オフィスにいようがリビングにいようが、カジュアルなアバターの参加者よりも有意に高いリスクテイク行動（大胆な行動）を示しました。 これは、行動を変容させる要因としては、環境よりも「自分がどのような姿をしているか（身体化）」の方が強力である可能性を示唆しています。
+However, contrary to our expectations, the environment did not modulate the Proteus Effect. Participants in the formal avatar condition showed significantly higher risk-taking behavior regardless of the environment.
+
+身体化（自分の体だと感じる感覚）やプレゼンス（そこにいる感覚）は、条件に関わらず全体的に高いスコアを示し、適合・不適合による有意な差は見られませんでした。現在のVR技術では、多少の文脈不一致があっても、基本的な身体所有感は損なわれない
+Embodiment and Presence were high across all conditions and not affected by congruence.
+（編集済み）
+
+28.アバターの身体の動きは、人の「善」と「悪」に対する知覚を変えることができるか？
+https://dl.acm.org/doi/abs/10.1162/PRES_a_00263
+
+我々は、「身体化された認知（EC）」の理論、および求心性（感覚入力）と感覚運動の対応関係に基づいて、バーチャルな身体化（Virtual Embodiment）について論じます。
+We discuss virtual embodiment according to theories of embodied cognition EC, and afferent and sensorimotor correspondences.
+
+認知に影響を与えるには、単なる視覚的フィードバックではなく、メディアによる多感覚的な体験、すなわち「感覚運動フィードバック」が必要である可能性があります。
+Multiple sensory experiences of media i.e., sensorimotor feedback may be necessary to influence cognition, not simply visual feedback.
+
+
+
+29.「自己アバターの見た目（リアリズムと身体の可視性）」が、ユーザーの「壁を避ける」という現実的な振る舞いを促進するかどうかを検証
+
+https://dl.acm.org/doi/10.1145/3313831.3376562
+
+ユーザーが仮想境界（例：壁）を通り抜けるのを防ぐことは、安全性や設計上の制限を考慮すると、ルームスケール仮想環境において対処すべき重要な課題である。
+Preventing users from walking through virtual boundaries (e.g., walls) is an important issue to be addressed in roomscale virtual environments (VEs), considering the safety and design limitations.
+
+結果として、リアルな全身アバターが、参加者の壁抜けを抑制するのに最も効果的であることが示された。さらに、プレゼンスが低い参加者ほど、より早く壁を通り抜ける傾向があった。
+The results showed that the realistic full-body self-avatar was the most effective for discouraging the participants from penetrating the walls. Furthermore, the participants with lower presence tended to walk through the walls sooner.
+
+我々の結果は、可視性と擬人化度のレベルを変えるだけで、仮想環境の設計者が状況に応じてユーザーを現実的（壁を避ける）あるいは非現実的（壁を抜ける）に振る舞うよう、暗黙的に誘導できることを示唆している。
+Our results suggest that simply by changing the visibility and the level of anthropomorphism, a VE designer can implicitly navigate users to behave realistically (i.e., avoiding the wall) or unrealistically (i.e., passing through the wall) depending on the situation.
+23:33
+30. VR空間でアバターの外見がユーザーの行動や態度に影響を与える現象「プロテウス効果（Proteus Effect）」について、その発生メカニズムを説明する既存および新規の理論仮説を批判的に検討したレビュー論文
+
+https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1379599/full
+
+したがって、本研究は文献の現状とその欠陥の概要を提供することを目的とする。また、プロテウス効果を説明しうる複数の理論的枠組みの批判的分析も提示する。
+Therefore, this work aims to give an overview of the current state of the literature and its shortcomings. It also presents a critical analysis of multiple theoretical frameworks that may help explain the Proteus effect.
+
+全体として、我々はプロテウス効果の根底にあるメカニズムについて、代替的な見解を提案する。この見解には、没入型VR、仮想環境、およびアバターの使用がユーザーに没個性化の感覚を引き起こすという考えが含まれる。この状態により、ユーザーはアバターの外見によって喚起される行動的および態度的期待に同調しやすくなる。さらに、この行動や態度の変化は、アバターの外見がユーザーの行動と一致しない場合に感じられる不協和を最小限に抑えようとする衝動によっても促進されると仮定する。
+All in all, we propose an alternative view of the underlying mechanisms of the Proteus effect. This view includes the idea that the use of immersive virtual reality, virtual environments, and avatars induces a sense of deindividuation within the user. This state makes the user more likely to conform to the behavioral and attitudinal expectations evoked by the appearance of the avatar. In addition, we also hypothesize that this behavioral and/or attitudinal change is also encouraged by a drive to minimize any possible dissonance felt when the avatar’s appearance is incongruent with the behavior of the user.
+
+没個性化 (Deindividuation): VR体験がユーザーを没個性化させ、アバターの手がかりに従いやすくする。
+認知的不協和 (Cognitive Dissonance): アバターの外見と行動の不一致を避けようとする心理が働く。
+身体化 (Embodiment): アバターへの所有感が強いほど、効果が強まる。 （編集済み） 
+
+31. アバターのカスタマイズを通じて「理想自己（Ideal Self）」や「義務自己（Ought Self）」といった自己概念を活性化させることが、健康的な食行動を促進するかどうかを調査
+https://www.tandfonline.com/doi/full/10.1080/15213269.2016.1234397
+
+本研究は、自己概念――すなわち、理想自己、義務自己、現実自己――が、健康的な食行動を促進するためのデジタルゲームにおけるアバターカスタマイズのモデルとして、どのように活用できるかを検証した。
+This study examined how self-concept—i.e., ideal self, ought self, and actual self—can be harnessed as a model for avatar customization in digital games to promote healthy-eating behavior.
+
+本研究は、デジタルゲームにおけるアバターカスタマイズが、個人の義務や責任を表象することで調整機能を果たし、その結果、ゲーム中およびゲーム後にアバターに現れたそのような属性を個人が採用するようになることを実証している。
+This study demonstrates that avatar customization in a digital game can serve a regulatory function by representing individuals’ duties and responsibilities, thus, causing them to adopt such attributes manifested in their avatar during and after the game.
+
+
+
+
+
+
+
+
+
+

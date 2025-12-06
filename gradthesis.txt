@@ -1,0 +1,335 @@
+\chapter{はじめに Introduction}
+
+仮想現実（VR）技術の発展により、ユーザーは仮想身体を通じて多様な体験が可能となった。VR研究は、視覚的な忠実度（Fidelity）の追求から、存在することの体験的忠実度、すなわち身体所有感（Sense of Body Ownership: SoBO）や行為主体感（Sense of Agency: SoA）へと焦点が移行してきた~\cite{guy2023sense}。身体化の錯覚（Embodiment Illusion）とは、ユーザーが能動的・自発的な運動実行を通じて頭や手足を動かし、脳内の予測状態が感覚入力（視覚、固有受容感覚、聴覚など）から得られる情報と一致したとき生じる強力なVRの錯覚である~\cite{gonzalezfranco2017model}。この錯覚の強さは、「私がこの行動の開始者であり源である」という主体感に由来する~\cite{gonzalezfranco2017model}。身体化感覚（Sense of Embodiment: SoE）の主要な構成要素である身体所有感（SoBO）と行為主体感（SoA）は機能的に分離可能であり~\cite{kalckert2012moving}、触覚刺激がなくても視覚情報と運動の同期だけで身体所有感は形成される~\cite{sanchezvives2010virtual}。
+
+VR空間における移動（ロコモーション）手法も身体化に影響を与える重要な要素である。従来の研究では、その場歩き（Walking-in-Place）~\cite{slater1995taking}、コントローラー/ジョイスティック~\cite{bowman2004user}、テレポート~\cite{bhandari2024walking}など多様な手法が提案されてきた。その場歩きは固有受容情報と感覚フィードバックの一致により存在感を高め~\cite{slater1995taking}、腕振り移動はジョイスティックよりも優れた空間認識を提供する~\cite{mccullough2015myo}。広大な物理空間での自然な歩行はテレポートよりもユーザー体験として優れ、VR酔いも少ない~\cite{sayyad2020walking}。ここで重要なのは、アバターの可視性と身体化の関係である。VRアクションゲームにおける研究では、多くのVRゲームが消費者向け全身モーションキャプチャデバイスの制約により、浮遊した仮想の手だけでユーザーを表現している~\cite{lugrin2018avatar}。興味深いことに、ゲーム文脈では表示される身体部分が増えても身体所有感、没入感、パフォーマンスに有意な差は見られず、見た目よりも「自分の思った通りに手が動くか（主体感）」がより重要であることが示唆されている~\cite{lugrin2018avatar}。移動技術と身体所有感の関係についても、アバターを身体化している場合、どの技術を用いても参加者は同程度の身体所有感を持つことが報告されている~\cite{dewez2020studying}。これらの知見は、身体化において視覚的な完全性よりも運動と感覚の同期が本質的に重要であることを示している。
+
+VR技術の進歩に伴い、人間型（擬人化）アバタを超えて、動物、空想上の生物、抽象的な形状など、非人間型の形態への身体化を通じて、人体スキーマの可塑性を探求する研究が進められている~\cite{ahn2016experiencing, spangenberger2022becoming, gagnon2023waddle}。非人間型アバタには動物だけでなく植物（木など）も含まれ、VRを通じて木の身体化を経験することで没入感や自然との関連性が促進されることが報告されている~\cite{spangenberger2022becoming}。動物の身体化に関しては、Ahnらの3つの実験（N=228）で牛やサンゴのアバターを用いてIVE（没入型仮想環境）とビデオを比較し、IVE条件が有意に高い身体転送（body transfer）と自己への自然の包含（INS）をもたらすことが示されている~\cite{ahn2016experiencing}。ペンギンへの身体化研究では、VRでの身体化の強さと体験後の共感度に有意な相関関係が見られ、非人間キャラクターへの身体化が教育や生物への理解促進において強力なツールとなりうることが実証されている~\cite{gagnon2023waddle}。
+
+多様な形態に宿るこの能力は、ユーザーが自身のデジタル表現の知覚された特性に合わせて行動や認知を変容させる「プロテウス効果」を誘発する~\cite{gonzalezfranco2017model, lan2023nonhuman, ratan2024proteus}。プロテウス効果のメカニズムについては、没入型VR、仮想環境、およびアバターの使用がユーザーに没個性化の感覚を引き起こし、アバターの外見によって喚起される行動的および態度的期待に同調しやすくなるという見解が提案されている~\cite{ratan2024proteus}。また、アバターの外見と行動の不一致を避けようとする認知的不協和の心理が働くとも仮定されている~\cite{ratan2024proteus}。非人間型アバターにおいてもプロテウス効果が確認されており、魅力的な非人間型アバターを体現した参加者は、自己類似性を通じたアバターへの同一視をより高く知覚し、社会的参加が増加することが示されている~\cite{lan2023nonhuman}。
+
+しかし、非人間型アバタにおいて強固な身体化感覚を達成するには、人間の運動学を非人間の生体力学にマッピングするという独自の課題が存在する~\cite{lee2023handavatar, kim2012kinetre, seol2013creature}。動物は関節の数や構造（形態）が人間と異なるため、「人間のどの部位を動物のどの部位に対応させるか」という正解がない~\cite{seol2013creature}。ユーザーの手の高い器用さと協調性を活用し、自動生成された関節間マッピングを通じて非ヒューマノイドアバターを制御する手法も提案されている~\cite{lee2023handavatar}。一方、全身を使って多様な静的メッシュをアニメーション化できるが、全身での非人間アバタ操作は負荷が高いという課題がある~\cite{kim2012kinetre}。
+
+現在の文献は、非人間型アバタにおける身体化の主要な推進要因として、動作の整合性（Motion Congruence）と身体的姿勢（Physical Posture）の2つを特定している。Khanら（2025）~\cite{khan2025avatar}は、アバタの外見と移動方法の間の整合性（congruence）がアバタへの同一視（avatar identification）とユーザー体験を有意に向上させることを実証した。これとは独立して、Krekhovら（2019）~\cite{krekhov2019animal}は身体的姿勢の重要性を強調し、アバタと整合した姿勢をとることが非人間型であっても強力な身体所有感を引き出せることを示した。
+
+
+これらの進展にもかかわらず、姿勢と動作の整合性の間の相互作用効果、および入力動作と動作姿勢のロコモーション時の検証が十分ではない。整合的な姿勢をとることは、単に身体化スコアを加算するだけなのか、それとも整合的な動作の認知的効果を増幅させる乗数として機能するのか？本研究では以下の研究課題を設定し、検証する。
+
+\begin{description}
+\item[RQ1（先行研究の追試）] VR空間での四足歩行アバタによる移動タスクにおいて、ユーザの物理的な姿勢（擬似四つん這い vs 立位）は、アバタへの自己認識（身体所有感、行為主体感）に影響を与えるか？
+\item[RQ2（先行研究の追試）] 操作のマッピング一致性（動物らしい vs 人間らしい）は、自己認識に影響を与えるか？
+\item[RQ3（交互作用）] マッピング一致性が自己認識に与える影響の度合いは、ユーザーの物理的な姿勢によって変わるか？（『擬似四つん這い』の時だけ、『動物らしい操作』の効果が特に強まる？）
+\end{description}
+
+Khanら~\cite{khan2025avatar}の「整合性」フレームワークとKrekhovら~\cite{krekhov2019animal}の「姿勢」フレームワークを統合し、両者をUrsus arctosの生物学的現実に基づかせることで、非人間型身体化の基礎となるメカニズムについて詳しく検討する。
+
+
+\chapter{関連研究 Related Work}
+
+\section{人型アバタへの身体化}
+
+VRにおける身体化の錯覚は、脳の予測符号化（Predictive Coding）メカニズムに基づいているといわれている~\cite{gonzalezfranco2017model}。ユーザーが能動的・自発的な運動実行を通じて頭や手足を動かし、脳内の予測状態が感覚入力と一致したとき、強力なVRの錯覚が生じる。不一致な感覚入力は、予測された世界の状態を確認するために再調整または抑制され、脳は予測された結果への優先傾向を強化するために感覚入力の方に誤りがあると「決定」することができる~\cite{gonzalezfranco2017model}。これらのトップダウンの主体感メカニズムは、特定の状況下で遅延（最大200msまで）への許容度を高めることが示されている。
+
+身体化感覚は、身体所有感（SoBO）と行為主体感（SoA）という代表的な2つの構成要素を含む~\cite{guy2023sense}。SoAとSoBOは機能的に分離可能であり、バーチャルな手を不一致な物体に置き換えても、リアルタイムの自発的な動きが保たれていれば潜在的なSoAは維持される~\cite{kalckert2012moving}。参加者は、現実とバーチャルの動きの間の視覚運動整合性が保たれていれば、非身体的な物体に対してさえSoAを経験することができる~\cite{kalckert2012moving}。また、触覚刺激がなくても、視覚情報と運動の同期だけで身体所有感の錯覚は形成される~\cite{sanchezvives2010virtual}。Sanchez-Vivesらの研究では、180秒間の視覚運動同期刺激の後、仮想の手が20秒かけて約20cm移動したにもかかわらず、被験者は自分の手が動いていないことを知りながらも、手の位置を仮想の手の方向に誤認した~\cite{sanchezvives2010virtual}。これは、視覚と固有受容感覚が視覚優位で統合されると、視覚的要素の移動が固有受容感覚的要素の移動も引き起こすことを示している。さらに重要な知見として、指の視覚触覚相関は個々の指の錯覚的変位を誘発するのに対し、指の動きの視覚運動相関は腕全体の錯覚的変位を誘発し、より全体的で断片化されていない身体所有感を生成することが報告されている~\cite{sanchezvives2010virtual}。VRにおいて「リアルタイム」かつ「タスクの邪魔にならない」評価手法が身体化の測定において最も重要とされている~\cite{guy2023sense}。認知に影響を与えるには、単なる視覚的フィードバックではなく、多感覚的な体験すなわち感覚運動フィードバックが必要である可能性がある~\cite{bailey2016virtual}。
+
+子供と成人を対象とした研究では、動きの同期（視覚運動同期）とアバターの外見が身体所有感と主体感に影響を与えることが確認されている~\cite{weijs2021development}。動きが遅れる（非同期）ほど、また外見が人間らしくないほど、所有感は減少するが、子供は成人より悪条件の影響を受けにくいことが示されている~\cite{weijs2021development}。アバターの外見のリアリズムと類似性は身体所有感にとって重要であり、ユーザー自身の顔に似たアバターを使用することでEmbodimentとPresenceが促進される~\cite{suk2023influence}。
+
+視点の選択も身体化に影響を与える。一人称視点と三人称視点の比較研究では、ナビゲーションタスクには一人称視点の方が適していることが示されており、三人称視点がリアルな表現と組み合わされたときのみ、一人称視点と同様の身体所有感と空間認識が得られることがわかっている~\cite{medeiros2018keep}。
+
+VR空間内での移動手法は多様化している。従来はコントローラーベースの移動が主流であり~\cite{bowman2004user}、主要な手法として、その場歩き（Walking-in-Place）、コントローラー/ジョイスティック、テレポートの3つが存在する~\cite{bhandari2024walking}。その場歩きは、人間の体の動きから得られる固有受容情報とディスプレイからの感覚フィードバックの一致が強いほど仮想環境での存在感が増すという考えに基づいているといわれている~\cite{slater1995taking}。腕振り移動は、高価な歩行トラッキングシステムの代わりに安価なウェアラブルデバイスを使用し、ジョイスティックよりも優れた空間認識を提供できる~\cite{mccullough2015myo}。広大な物理空間での自然な歩行はテレポートよりもユーザー体験として優れており、VR酔いも少ない~\cite{sayyad2020walking}。移動技術と身体所有感の関係については、アバターを身体化している場合、どの技術を用いても参加者は同程度の身体所有感を持つことが報告されている~\cite{dewez2020studying}。ローイングマシンを用いたVR移動研究では、頭、手、足の動きに基づいた操縦技術が2Dおよび3D VR環境向けに実装されている~\cite{zielasko2024rowing}。
+
+VR空間におけるアバターが現実の物理法則に従って動くことも、身体所有感に影響を与える~\cite{kang2023physics}。ユーザーの動きとの同期（1対1のマッピング）を多少犠牲にしても、環境に対して物理的に正しく反応する方が、VR体験における身体性を向上させることが示されている~\cite{kang2023physics}。物理対応アバターは、単なる身体認識だけでなく、周囲の環境との関係性（Environment Awareness）をユーザーに提供する~\cite{kang2023physics}。自己アバターの見た目（リアリズムと身体の可視性）は、ユーザーの現実的な振る舞いにも影響し、リアルな全身アバターが参加者の壁抜けを抑制するのに最も効果的であることが示されている~\cite{ogawa2020feel}。
+
+\section{非人間型アバタへの身体化}
+
+非人間型アバタへの身体化研究は、動物から植物まで多様な形態を対象としている。動物の身体化に関しては、Ahnらによる3つの実験（N=228）で、牛とサンゴのアバターを用いてIVE（没入型仮想環境）での身体化体験とビデオ視聴を比較した研究がある~\cite{ahn2016experiencing}。実験1では、参加者は四つん這いになり牧草地で牛のアバターを体験し、仮想の電気棒で突かれると同時に床の振動と背中への物理的刺激が触覚フィードバックとして与えられた~\cite{ahn2016experiencing}。結果として、IVE条件はビデオ条件と比較して、より高い空間的実在感（spatial presence, d=.69）、身体転送（body transfer, d=.62）、および自己への自然の包含（INS, d=.86）を示した~\cite{ahn2016experiencing}。並列媒介分析の結果、3つの実験を通じて一貫してIVE体験とINSの関係を媒介していたのは身体転送のみであり、空間的実在感の媒介効果は実験1では有意でなく、実験2でも1週間後には消失した~\cite{ahn2016experiencing}。植物（木）の身体化研究では、iVRを通じて木の身体化を経験することが没入感、自然との関連性、視点取得、人間と自然の関係についての省察を促進するかが調査されている~\cite{spangenberger2022becoming}。参加者が体験に没入していると感じるほど、自然との関連性のレベルが高まることが報告されている~\cite{spangenberger2022becoming}。ペンギンへの身体化研究では、VRでの身体化の強さと体験後の共感度に有意な相関関係が見られ、非人間キャラクターへの身体化が教育や生物への理解促進において強力なツールとなりうることが実証されている~\cite{gagnon2023waddle}。
+
+人間以外のキャラクターをリアルタイムに操作するパペトリーシステムでは、身体構造や動作パターンが人間と大きく異なる様々なクリーチャーの制御が試みられている~\cite{seol2013creature}。動物やクリーチャーは関節の数や形態が人間と異なるため、人間とクリーチャー間の身体対応関係の設計は曖昧で非自明なタスクである~\cite{seol2013creature}。直接特徴マッピング手法では最適な人間-クリーチャー間の身体対応関係が選択され、人間が物理的に真似できない動きについてはモーションカップリングが使用される~\cite{seol2013creature}。HandAvatarは、ユーザーの手の高い器用さと協調性を活用し、自動生成された関節間マッピングを通じて非ヒューマノイドアバターを制御する手法を提案している~\cite{lee2023handavatar}。このシステムは、制御精度（F）、構造的類似性（S）、快適さ（C）の3つの目的関数を重み付けして同時最適化（$Q = W_f \times F + W_s \times S + W_c \times C$）することで、ユーザーが優先する要素に応じたマッピングを自動生成する~\cite{lee2023handavatar}。評価実験では、全身ベースの制御方法と比較して、静的ポーズにおいて40\%、動的アニメーションにおいて25\%の関節偏差削減を達成し、身体化感覚（embodiment）を維持しながらより高い制御精度と快適さを提供することが示された~\cite{lee2023handavatar}。KinEtreは非専門家ユーザーが人間の全身を使って椅子や本棚、はしごなど任意の静的メッシュをリアルタイムにアニメーション化できるシステムであり、非人間型オブジェクトの操作において高い没入感を提供するが、全身でのインタラクションは非常に身体的な活動であり、特に四足動物のように這いつくばる姿勢が必要な場合は著しい疲労を伴う~\cite{chen2012kinetre}。
+
+Krekhovら（2019）~\cite{krekhov2019beyond}は、仮想の身体所有感の錯覚（IVBO）が非人間型アバターにおいて特に高い潜在能力を持つと仮説を立て、サイ、サソリ、鳥という3種類の動物アバターを用いたエスケープルームゲームで検証した。各ゲームでは動物特有の能力（サイの角、サソリの尾と鋏、鳥の翼）を活用したメカニクスが実装され、32名の参加者による評価の結果、IVBOとゲームの楽しさ、およびプレゼンス感との間に有意な正の相関が確認された~\cite{krekhov2019beyond}。姿勢に関しては、サイでは四つん這いによる1:1マッピング、サソリでは立位によるハーフボディマッピングが採用され、いずれの姿勢も直感的で現実的と評価された。特に、立位でサソリを操作する条件でも、四つん這いでサイを操作する条件と同等のIVBOスコアが得られ、追加の身体パーツ（角、尻尾、翼など）の制御も没入感を損なわないことが示された~\cite{krekhov2019beyond}。
+
+プロテウス効果とは、ユーザーが自身のデジタル表現の知覚された特性に合わせて行動や認知を変容させる現象である~\cite{gonzalezfranco2017model, lan2023nonhuman, ratan2024proteus}。仮想環境において、人々は自分が体現しているバーチャルアバターの特徴に沿った行動をとる傾向がある~\cite{lan2023nonhuman}。プロテウス効果のメカニズムについては、没入型VRとアバターの使用がユーザーに没個性化の感覚を引き起こし、アバターの外見によって喚起される行動的・態度的期待に同調しやすくなるという見解が提案されている~\cite{ratan2024proteus}。また、アバターの外見と行動の不一致を避けようとする認知的不協和の心理も働く~\cite{ratan2024proteus}。非人間型アバターにおいてもプロテウス効果は確認されており、魅力的な非人間型アバターを体現した参加者は、自己類似性を通じたアバターへの同一視をより高く知覚し、社会的参加が増加する~\cite{lan2023nonhuman}。アバターと環境の適合性に関しては、両者が一致している場合にシミュレーションのもっともらしさ（特に外的整合性）の評価が有意に高まるが、プロテウス効果は環境の違いによって変化せず、自分がどのような姿をしているかが行動変容の要因としてより強力である可能性が示唆されている~\cite{mal2023avatar}。身体化やプレゼンスは条件に関わらず全体的に高いスコアを示し、多少の文脈不一致があっても基本的な身体所有感は損なわれない~\cite{mal2023avatar}。
+
+\section{姿勢と入力動作の一致性}
+
+非人間型アバタにおける身体化の推進要因として、動作の整合性（Motion Congruence）と身体的姿勢（Physical Posture）が特定されている。本節では、これらの要因に関する2つの重要な先行研究について詳述する。
+
+Khanら（2025）~\cite{khan2025avatar}は、アバタの外見と移動方法の整合性（Avatar-Locomotion Congruence）がユーザー体験とアバタへの同一視（avatar identification）に与える影響を調査した。彼らは30名の参加者を対象に被験者内実験を実施し、2種類のアバタ（ゴリラと人間）と2種類の移動方法（ゴリラ的なアームローリングと人間的な腕振り）を用いた。アームローリングは人気のソーシャルVRゲーム「Gorilla Tag」に触発されたもので、ユーザーの視点は地面に近く設定され、仮想の手が地面に接触してゴリラの四足歩行を模倣する。ユーザーは地面に対して手を引いたり押したりすることで、シミュレートされた力を発生させ運動量を生成する。一方、腕振り移動はパルクールゲーム「Stride」などで使用されており、ユーザーの視点はより高く設定され、自然な歩行動作で腕を振ることで移動する。実験の結果、アバタの外見と移動方法が整合している条件（ゴリラ×アームローリング、人間×腕振り）において、アバタへの同一視（wishful identification、embodied presence、similarity identification）とユーザー体験（enjoyment、satisfaction、ease of learning）が有意に向上することが明らかになった。特に、ゴリラアバタとアームローリングの組み合わせは、他の条件と比較して高い楽しさと満足度を示した。また、整合条件では学習のしやすさが向上し、不整合条件（例：ゴリラ×腕振り）ではより急な学習曲線が観察された。参加者からは「マッチした移動方法を持つアバタは、キャラクターとのつながりをより感じさせた」「鏡でゴリラとしての自分を見ると、もっとゴリラのように振る舞いたくなった」といったフィードバックが得られている。ただし、Khanらの研究ではユーザーは常に直立姿勢でVR体験を行っており、身体的姿勢の変化（例：四つん這い）については検討されていない。
+
+Krekhovら（2019）~\cite{krekhov2019animal}は、仮想の身体所有感の錯覚（Illusion of Virtual Body Ownership: IVBO）が非人間型アバターにも適用可能かを探求した。彼らは26名の参加者を対象に被験者内実験を実施し、人間の身体とは骨格、姿勢、形状が異なる3種類の動物アバター（コウモリ、トラ、クモ）と人間アバターを比較した。動物の選定理由として、コウモリは人間と姿勢・骨格が類似しているが形状（プロポーション）が異なり、トラは骨格は類似しているが四足歩行という姿勢が異なり、クモは8本の脚を持つという骨格自体が大きく異なる。実験では、複数のボディマッピング手法が検証された。Full-body（FB）トラッキングではユーザーの姿勢が動物の全身にマッピングされ、half-body（HB）トラッキングではユーザーが直立姿勢を維持したまま下半身の動きのみを動物の全肢にマッピングする（例：人間の片脚がトラの2本の脚に対応）。また、一人称視点と三人称視点の比較も行われた。
+
+実験の結果、IVBOは非人間型アバターにも適用可能であり、特にコウモリアバターはacceptance（受容）とcontrol（制御）の次元において人間アバターを有意に上回るスコアを獲得した。これは、人間に類似した直立姿勢と骨格を持つ動物がIVBOを誘発しやすいことを示唆している。重要な知見として、FBトラッキングとHBトラッキングの間でIVBOスコアに有意差は見られなかった。つまり、1:1の全身マッピングはIVBOの必要条件ではなく、HBアプローチでも同等のIVBO効果が得られることが示された。一方、FBモードでトラやクモを操作する場合、ユーザーは床に這いつくばる必要があり、著しい疲労が報告された。HBモードはこの疲労を大幅に軽減しつつIVBOレベルを維持できるため、直立姿勢でない動物には有効な代替手段となる。また、一人称視点は三人称視点よりもIVBOにおいて優れていることが確認された。ただし、Krekhovらの研究は主にアバター操作の静的または半静的な姿勢の一致に焦点を当てており、移動時の動作の運動学については深く調査されていない。
+
+これら2つの研究は、それぞれ動作の整合性と身体的姿勢の重要性を独立に示しているが、両者の相互作用については検討されていない。本研究ではこれを拡張し、姿勢は単なる静的変数ではなく、移動中の動的な有効化要因であると考える。ユーザーがアバタの方向と整合した姿勢をとることで、運動指令をアバタの動きに変換するために必要な認知的負荷が軽減され、整合的な動作パターンの効果が増幅される可能性がある~\cite{khan2025avatar, gonzalezfranco2017model}。さらに、動物アバタにおける「整合的な動作」は、厳密な生物学的データから導き出されるのではなく、デザイナーによって近似的に設定されることが多いという問題もある~\cite{seol2013creature}。本研究では、Ursus arctos（ヒグマ）の生体力学的データに基づいて整合的な動作を定義することで、この問題に対処する。
+
+
+\clearpage
+
+\chapter[引用・脚注 Reference and Footnote]{引用・脚注 Reference and Footnote}
+
+\section{引用 Reference}
+
+関連研究は，論文を書く上では必ず引用する．
+論文の種類によって引用する方法は変わらないが，それぞれの例を列挙する．どのように引用されているかは，参考文献の章を確認してほしい．
+
+\begin{itemize}[noitemsep]
+    \item 国内学会・研究会論文\cite{JapaneseConfSample}
+    \item 国内論文誌\cite{JapaneseJournalSample}
+    \item 国際学会の論文\cite{ConfPaperSample}
+    \item 国際学術誌\cite{InternationalJournalSample}
+\end{itemize}
+
+\section{脚注 Footnote}
+
+脚注の基準は，「引用するほどではないが，資料として載せておいた方が読者の助けとなる」ようなものは脚注として追加する．
+個人的には，製品やプラグインなどは脚注として扱っている．
+脚注の書き方としては，以下のように記述する．
+
+\begin{itemize}[noitemsep]
+    \item 製品の例：Meta Quest 3\footnote{Meta Quest 3: 複合現実を体験できる新しいVRヘッドセット - 購入する | Meta Store, https://www.meta.com/jp/quest/quest-3/，アクセス日：2024年2月5日}
+    \item プラグインの例：Final IK\footnote{Final IK | アニメーション ツール | Unity Asset Store, https://assetstore.unity.com/packages/tools/animation/final-ik-14290?locale=ja-JP, アクセス日：2024年2月5日}
+\end{itemize}
+
+\clearpage
+
+\chapter{文章 Script}
+
+\section{標準スクリプト Normal Script}
+
+標準スクリプト（地の文）はそのまま書けば良い．
+改行する際には，スクリプト側で1行開けるか，このように\\すればよい．（スクリプト側を見てください．）
+
+\section{数式 Equation}
+
+数式を書く場合には，数式環境，Equation環境の2通りある．
+
+\subsection{数式環境 Mathematical Environment}
+
+数式環境を使うと，文章中に数式$y_{0}=a_{0}x^{2}+b_{0}$を挿入できる．
+下付き文字や上付き文字を書くためには，ほとんどの場合，数式環境が必要になる．
+下付き文字は\_を，上付き文字は\^を用いて記述する．
+なお，数式環境では，ギリシャ文字（$\theta$, $\rho$など）が使用できる．
+自身の研究において補足として記述しておきたいような数式は，数式環境での記述を推奨する．
+
+\subsection{Equation環境 Equation Environment}
+
+Equation環境を使うと，文章と文章の間に直接記述される．
+
+\begin{equation}
+    y_{0}=a_{0}x^{2}+b_{0}\label{eq:sample1}
+\end{equation}
+
+数式の係数を記述するためには，数式環境を用いる場合もある．
+例えば，$a_{0}$は係数1，$b_{0}$は定数などのように記述する．
+数式の引用は，\eqrefer{eq:sample1}のように行う．
+
+数式中に書きたい場合は，以下のように記述する．
+
+\begin{equation}
+    \begin{split}
+        y_{0}&=a_{0}x^{2}+b_{0} \\ \label{eq:sample2}
+        &a_{0}: 係数1 \\
+        &a_{0}: 係数2
+    \end{split}
+\end{equation}
+
+数式を書く上で，分数や行列を使う例が多いと思われるので，以下に示す．
+
+\begin{equation}
+    R = \frac{I}{V}
+\end{equation}
+
+\begin{equation}
+    R_{x}({\theta}) =   \begin{pmatrix}
+                    1 & 0 & 0 \\
+                    0 & \cos\theta & -\sin\theta \\
+                    0 & \sin\theta & \cos\theta \\
+                    \end{pmatrix}
+\end{equation}
+
+自身の研究において重要な位置づけである数式は，Equation環境での記述を推奨する．
+
+
+
+\section{箇条書き Itemization}
+
+\subsection{番号なし箇条書き Itemization without Numbering}
+
+番号なし箇条書きは以下のように書く．
+
+\begin{itemize}[noitemsep]
+    \item 箇条書き項目その１．
+    \item 箇条書き項目その２．
+\end{itemize}
+
+\subsection{番号付き箇条書き Itemization with Numbering}
+
+番号付き箇条書きは以下のように書く．
+
+\begin{enumerate}[noitemsep]
+    \item 実験者が準備した．
+    \item 実験者が何か行った．\label{stp:initial}
+    \item 実験者が何かした．\label{stp:contents}
+    \item 実験者がシステムに命令した．\label{stp:end}
+    \item ステップ\ref{stp:initial}からステップ\ref{stp:end}までをすべての条件で実施した．
+\end{enumerate}
+
+\clearpage
+
+\chapter{図表 Figure and Table}
+
+\section{図 Figure}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width = \textwidth]{figures/sample_image1.pdf}
+    \caption{サンプル画像1. Sample Image 1.}
+    \label{fig:sample_image1}
+\end{figure}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{figures/sample_picture1.png}
+    \vspace{1mm}
+    \caption{サンプル画像2. Sample Image 2.}
+    \label{fig:sample_image2}
+\end{figure}
+
+図を挿入するときにはfigure環境を使う．
+文章部分に記述されているので，チェックしてほしい．
+引用するときには\figref{fig:sample_image1}とする．
+図には必ずキャプションを図の下につける．
+図とキャプションの間のスペースが狭かったり広かったりする場合があるので，その時はvspaceコマンドなどを用いて調整することを推奨する．
+図の形式としては，ラスタ形式（jpg, pngなどの形式）よりもベクタ形式（pdfなど）の方が拡大したときにも図が鮮明に見えるので，可能であれば，ベクタ形式の図を用いたほうが良い．
+
+図の大きさはwidthやheightやscaleなどのパラメータによって調整できる．
+ただし，アスペクト比を保つために，widthとheightは同時に指定せず，片方だけ指定する．
+また，図の幅が必ず文書の幅を超えないようにするために，includegraphicsコマンドを使用するときに，width={\textbackslash}textwidth（文書の幅を示す変数）等を用いるようにする．
+図の幅と文書の幅のサイズをwidth=0.5{\textbackslash}textwidthとすれば，画像の幅が文書の幅の半分に調整される（\figref{fig:sample_image2}）．
+% scaleは使用を推奨しない．
+画像のファイルサイズは，大きすぎないように調整するべきである．
+文書に入れる画像ファイルサイズが大きくなるにつれて，コンパイル時間が長くなるためである．
+図の挿入位置はページ上部かページ下部のどちらかにする．
+figure環境を入れるときに，tbを指定することでページ上部・下部に図が配置できる．
+
+文章中で図を引用するときには，引用した図が同じページであることが望ましい．
+しかし，図を配置するときに，期待した位置に配置されない場合がある．
+そのときは，マニュスクリプト上のfigure環境を挿入する位置を変更することで，期待通りの位置に図の位置を移動できる可能性がある．
+
+\subsection{複数の図 Multiple Figures}
+
+複数の図をまとめて挿入したい場合は，\figref{fig:double_figures}のように行う．
+複数の図を挿入する場合には，図の高さを合わせたほうが，出力時にバランスの取れた図になる．
+また，複数の図を並べて入れる場合には，それぞれの図のアスペクト比が異なる場合には，図の幅を合わせることは推奨しない．
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[height=40mm]{figures/sample_image2.pdf}
+    \includegraphics[height=40mm]{figures/sample_image3.pdf}
+    \vspace{2mm}
+    \caption{複数の図のサンプル．Sample of Multi-Figures.（左）サンプル1．（右）サンプル2．}
+    \label{fig:double_figures}
+\end{figure}
+
+minipageとsubcaptionを組み合わせて使うことで複数の図を挿入する方法もある．
+例を\figref{fig:double_figures_ex2}に示す．
+なお，この方法だと，各図にラベルを付けることが可能になる（例：\figref{fig:double_figures_ex2_1}）．
+
+\begin{figure}[tbp]
+  \begin{minipage}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[height=50mm]{figures/l_01_square_white.png}
+    \subcaption{サンプル3．}
+    \label{fig:double_figures_ex2_1}
+  \end{minipage}
+  \begin{minipage}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[height=50mm]{figures/l_02_square_white.png}
+    \subcaption{サンプル4．}
+    \label{fig:double_figures_ex2_2}
+  \end{minipage}
+  \vspace{2mm}
+  \caption{複数の図のサンプル2．2nd Sample of Multi-Figures．}
+  \label{fig:double_figures_ex2}
+\end{figure}
+
+
+\section{表 Table}
+
+表を挿入するときにはtable環境を使う．
+文章部分に記述されているので，チェックしてほしい．
+引用するときには\tabref{tab:sample1}とする．
+表には必ずキャプションを表の上につけるようにする．
+表を挿入するときには，{\LaTeX}の組み込まれているものが使用できるが，表の本体部分を図として作って挿入することも可能である．
+
+\begin{table}[htb]
+    \centering
+    \caption{表のサンプル．Table Sample}
+    \vspace{1mm}
+    \begin{tabular}{c|cccc}
+        \hline \hline
+         条件 & A & B & C & D \\ \hline
+         遅延 [ms] & 20 & 30 & 40 & 50 \\ \hline
+    \end{tabular}
+    \label{tab:sample1}
+\end{table}
+
+\clearpage
+
+\chapter{参考文献 References}
+
+\begin{thebibliography}{99}
+
+\bibitem{khan2025avatar}
+O. Khan, H. Nam and K. Kim, ``Impact of Avatar-Locomotion Congruence on User Experience and Identification in Virtual Reality,'' in \textit{IEEE Transactions on Visualization and Computer Graphics}, vol. 31, no. 11, pp. 9878-9888, Nov. 2025, doi: 10.1109/TVCG.2025.3616836.
+
+\bibitem{krekhov2019animal}
+A. Krekhov, S. Cmentowski and J. Krüger, ``The Illusion of Animal Body Ownership and Its Potential for Virtual Reality Games,'' in \textit{2019 IEEE Conference on Games (CoG)}, London, UK, pp. 1-8, Aug. 2019, doi: 10.1109/CIG.2019.8848005.
+
+\bibitem{krekhov2019beyond}
+A. Krekhov, S. Cmentowski, K. Emmerich and J. Krüger, ``Beyond Human: Animals as an Escape from Stereotype Avatars in Virtual Reality Games,'' in \textit{Proceedings of the Annual Symposium on Computer-Human Interaction in Play (CHI PLAY '19)}, Association for Computing Machinery, New York, NY, USA, pp. 439-451, Oct. 2019, doi: 10.1145/3311350.3347172.
+
+\bibitem{kilteni2012sense}
+K. Kilteni, R. Groten and M. Slater, ``The Sense of Embodiment in Virtual Reality,'' \textit{Presence: Teleoperators and Virtual Environments}, vol. 21, no. 4, pp. 373-387, 2012.
+
+\bibitem{gonzalezfranco2017model}
+M. Gonzalez-Franco and J. Lanier, ``Model of Illusions and Virtual Reality,'' \textit{Frontiers in Psychology}, vol. 8, article 1125, 2017, doi: 10.3389/fpsyg.2017.01125.
+
+\bibitem{sanchezvives2010virtual}
+M. V. Sanchez-Vives, B. Spanlang, A. Frisoli, M. Bergamasco and M. Slater, ``Virtual Hand Illusion Induced by Visuomotor Correlations,'' \textit{PLOS ONE}, vol. 5, no. 4, e10381, Apr. 2010, doi: 10.1371/journal.pone.0010381.
+
+\bibitem{girondini2025human}
+M. Girondini, M. Mariano, G. Stanco, A. Gallace and L. Zapparoli, ``Human bodies in virtual worlds: a systematic review of implicit sense of agency and ownership measured in immersive virtual reality environments,'' \textit{Frontiers in Human Neuroscience}, vol. 19, article 1553574, 2025, doi: 10.3389/fnhum.2025.1553574.
+
+\bibitem{tao2023embodying}
+Y. Tao, C. Y. Wang, A. D. Wilson, E. Ofek and M. Gonzalez-Franco, ``Embodying Physics-Aware Avatars in Virtual Reality,'' in \textit{Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI '23)}, Association for Computing Machinery, New York, NY, USA, Article 254, pp. 1-15, 2023, doi: 10.1145/3544548.3580979.
+
+\bibitem{slater1995taking}
+M. Slater, M. Usoh and A. Steed, ``Taking steps: the influence of a walking technique on presence in virtual reality,'' \textit{ACM Trans. Comput.-Hum. Interact.}, vol. 2, no. 3, pp. 201-219, Sept. 1995, doi: 10.1145/210079.210084.
+
+\bibitem{mccullough2015myo}
+M. McCullough, H. Xu, J. Michelson, M. Jackoski, W. Pease, W. Cobb, W. Kalescky, J. Ladd and B. Williams, ``Myo arm: swinging to explore a VE,'' in \textit{Proceedings of the ACM SIGGRAPH Symposium on Applied Perception (SAP '15)}, Association for Computing Machinery, New York, NY, USA, pp. 107-113, 2015, doi: 10.1145/2804408.2804416.
+
+\bibitem{jiang2023handavatar}
+Y. Jiang, Z. Li, M. He, D. Lindlbauer and Y. Yan, ``HandAvatar: Embodying Non-Humanoid Virtual Avatars through Hands,'' in \textit{Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI '23)}, Association for Computing Machinery, New York, NY, USA, Article 309, pp. 1-17, 2023, doi: 10.1145/3544548.3581027.
+
+\bibitem{chen2012kinetre}
+J. Chen, S. Izadi and A. Fitzgibbon, ``KinÊtre: animating the world with the human body,'' in \textit{Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12)}, Association for Computing Machinery, New York, NY, USA, pp. 435-444, 2012, doi: 10.1145/2380116.2380171.
+
+\bibitem{seol2013creature}
+Y. Seol, C. O'Sullivan and J. Lee, ``Creature features: online motion puppetry for non-human characters,'' in \textit{Proceedings of the 12th ACM SIGGRAPH/Eurographics Symposium on Computer Animation (SCA '13)}, Association for Computing Machinery, New York, NY, USA, pp. 213-221, 2013, doi: 10.1145/2485895.2485903.
+
+\bibitem{hedlund2024rowing}
+M. Hedlund, C. Bogdan, G. Meixner and A. Matviienko, ``Rowing Beyond: Investigating Steering Methods for Rowing-based Locomotion in Virtual Environments,'' in \textit{Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems (CHI '24)}, Association for Computing Machinery, New York, NY, USA, Article 631, pp. 1-17, 2024, doi: 10.1145/3613904.3642192.
+
+\bibitem{guy2023sense}
+M. Guy, J.-M. Normand, C. Jeunet-Kelway and G. Moreau, ``The sense of embodiment in Virtual Reality and its assessment methods,'' \textit{Frontiers in Virtual Reality}, vol. 4, 2023, doi: 10.3389/frvir.2023.1141683, ISSN: 2673-4192.
+
+\bibitem{ahn2016experiencing}
+S. J. Ahn, J. Bostick, E. Ogle, K. L. Nowak, K. T. McGillicuddy and J. N. Bailenson, ``Experiencing Nature: Embodying Animals in Immersive Virtual Environments Increases Inclusion of Nature in Self and Involvement with Nature,'' \textit{Journal of Computer-Mediated Communication}, vol. 21, no. 6, pp. 399-419, 2016, doi: 10.1111/jcc4.12173.
+
+\bibitem{lugrin2018avatar}
+J.-L. Lugrin, M. Landeck, M. E. Latoschik, A. Hotho, G. Seufert, and M. Wittmann, ``Any `Body' There? Avatar Visibility Effects in a Virtual Reality Game,'' in \textit{2018 IEEE Conference on Virtual Reality and 3D User Interfaces (VR)}, Tuebingen/Reutlingen, Germany, pp. 17-24, 2018, doi: 10.1109/VR.2018.8446229.
+
+\end{thebibliography}
+
