@@ -1,0 +1,5 @@
+Backup of original English abstract from ahsc.txt:
+We present a VR system investigating interaction effects between physical posture and avatar-locomotion congruence on non-humanoid avatar embodiment. Prior research demonstrated that congruent avatar-locomotion conditions improve avatar identification and user experience, and that body ownership can be achieved with non-humanoid avatars through appropriate body tracking. However, the interplay between posture and locomotion congruence during active movement remains unexplored. Our system enables users to embody a bear avatar through a $2 \times 2$ design: two postures (upright vs. pseudo-quadrupedal) and two locomotion methods (human arm-swinging vs. congruent quadrupedal rowing). We hypothesize that pseudo-quadrupedal posture amplifies the effects of congruent locomotion on avatar embodiment, using a bear avatar as an example case.
+
+
+

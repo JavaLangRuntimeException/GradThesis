@@ -3,7 +3,7 @@
 %% Quadrupedal Locomotion in VR: Investigating the Interaction Effects of Posture and Motion on Avatar Embodiment
 %%
 
-\documentclass[manuscript,screen]{acmart}
+\documentclass[manuscript]{acmart}
 
 \AtBeginDocument{%
   \providecommand\BibTeX{{%
@@ -16,7 +16,7 @@
 \acmConference[AHs '26]{Augmented Humans Conference 2026}{March 2026}{Location TBD}
 \acmISBN{978-1-4503-XXXX-X/2026/03}
 
-\title{Quadrupedal Locomotion in VR: Investigating the Interaction Effects of Posture and Motion on Avatar Embodiment.}
+\title{Experiencing Walking‑in‑Place Locomotion in Virtual Reality with Quadrupedal Animal Avatars}
 
 \author{Shuta Tanahashi}
 \affiliation{%
@@ -25,8 +25,56 @@
   \country{Japan}
 }
 \email{tanahasi@rm2c.ise.ritsumei.ac.jp}
-
-\renewcommand{\shortauthors}{Anonymous}
+\author{Satoshi Hashiguchi}
+\affiliation{%
+  \institution{Ritsumeikan University}
+  \city{Ibaraki, Osaka}
+  \country{Japan}
+}
+\author{Fumihiko Nakamura}
+\affiliation{%
+  \institution{Ritsumeikan University}
+  \city{Ibaraki, Osaka}
+  \country{Japan}
+}
+\author{Yuta Kataoka}
+\affiliation{%
+  \institution{Ritsumeikan University}
+  \city{Ibaraki, Osaka}
+  \country{Japan}
+}
+\author{Fumihisa Shibata}
+\affiliation{%
+  \institution{Ritsumeikan University}
+  \city{Ibaraki, Osaka}
+  \country{Japan}
+}
+\author{Peter Mohr-Ziak}
+\affiliation{%
+  \institution{Graz University of Technology}
+  \city{Graz, Styria}
+  \country{Austria}
+}
+\author{Ana Stanescu}
+\affiliation{%
+  \institution{VRVis GmbH}
+  \city{Graz, Styria}
+  \country{Austria}
+}
+\author{Shohei Mori*}
+\thanks{*shared last authorship}
+\affiliation{%
+  \institution{University of Stuttgart}
+  \city{Vaihingen, Baden-Württemberg}
+  \country{Germany}
+}
+\author{Asako Kimura*}
+\affiliation{%
+  \institution{Ritsumeikan University}
+  \city{Ibaraki, Osaka}
+  \country{Japan}
+}
+\renewcommand{\shortauthors}{Tanahashi et al.}
 
 
 \begin{CCSXML}
@@ -49,56 +97,53 @@
 
 \keywords{Virtual Reality, Avatar Embodiment, Non-Humanoid Avatars, Locomotion, Quadrupedal Motion}
 
-%% Uncomment when figure is available:
-% \begin{teaserfigure}
-%   \centering
-%   \includegraphics[width=\textwidth]{figures/teaser}
-%   \caption{Two images showing a human performing bear-like rowing in a quadrupedal posture and a bear in a grassland VR environment.}
-%   \Description{}
-%   \label{fig:teaser}
-% \end{teaserfigure}
+\begin{teaserfigure}
+  \centering
+  \includegraphics[width=\textwidth]{figure/teaser}
+  \caption{User interaction with the bear avatar. A) Brown bear avatar in a virtual grassland from the user's first-person perspective. B) User performing bear-like rowing in pseudo-quadrupedal posture, where posture and locomotion are congruent with bear biomechanics.}
+  \Description{Two side-by-side images. The left image shows a realistic brown bear standing in a grassland VR environment. The right image shows a human user in a forward-leaning quadrupedal posture performing rowing arm movements while wearing a VR headset.}
+  \label{fig:teaser}
+\end{teaserfigure}
 
 \begin{document}
 
 \maketitle
 
 \section*{Abstract}
-We present a VR system investigating interaction effects between physical posture and avatar-locomotion congruence on non-humanoid avatar embodiment. Prior research demonstrated that congruent avatar-locomotion conditions improve avatar identification and user experience, and that the Illusion of Virtual Body Ownership (IVBO) can be achieved with non-humanoid avatars through appropriate body tracking. However, the interplay between posture and locomotion congruence during active movement remains unexplored. Our system enables users to embody a bear avatar through a $2 \times 2$ design: two postures (upright vs. pseudo-quadrupedal) and two locomotion methods (human arm-swinging vs. congruent quadrupedal rowing). We hypothesize that pseudo-quadrupedal posture amplifies the effects of congruent locomotion on IVBO, providing insights for non-humanoid avatar design.
+We present a VR demo that allows attendees to embody a non-humanoid bear avatar and directly experience how physical posture and avatar-locomotion congruence interact in shaping avatar embodiment. Prior research demonstrated that congruent avatar-locomotion conditions improve avatar identification and user experience, and that body ownership can be achieved with non-humanoid avatars through appropriate body tracking. However, the interplay between posture and locomotion congruence during active movement remains unexplored. Our demo presents a $2 \times 2$ set of posture-locomotion demo trials---two postures (standing vs. pseudo-quadrupedal) and two locomotion methods (human arm-swinging vs. avatar-congruent quadrupedal rowing)---so visitors can feel differences in embodiment, effort, and naturalness across conditions. Using a bear avatar as an illustrative case, the demo showcases how pseudo-quadrupedal posture may amplify the effects of congruent locomotion on avatar embodiment.
 
 \section{Introduction}
 
-Advances in Virtual Reality (VR) technology have enabled users to experience diverse perspectives through virtual bodies. VR research has shifted from visual fidelity to experiential fidelity---Sense of Body Ownership (SoBO) and Sense of Agency (SoA)~\cite{10.3389/frvir.2023.1141683}. These embodiment illusions emerge when users' predicted motor states match sensory feedback during voluntary movement~\cite{10.3389/fpsyg.2017.01125}. SoBO and SoA are functionally dissociable~\cite{10.3389/fnhum.2012.00040}, and visuomotor synchrony alone can induce body ownership without tactile stimulation~\cite{10.1371/journal.pone.0010381}.
+Virtual Reality (VR) enables users to inhabit virtual bodies and experience the world from novel perspectives. Recent VR research has shifted its focus from visual fidelity to experiential fidelity, particularly the Sense of Body Ownership (SoBO) and Sense of Agency (SoA)~\cite{10.3389/frvir.2023.1141683}. Embodiment illusions arise when predicted motor states are congruent with incoming sensory feedback during voluntary movement~\cite{10.3389/fpsyg.2017.01125}; SoBO and SoA are functionally dissociable~\cite{10.3389/fnhum.2012.00040}, and even simple visuomotor synchrony can induce body ownership~\cite{10.1371/journal.pone.0010381}. Prior work further indicates that agency matters more than avatar visibility~\cite{8446229} and that comparable levels of embodiment can be achieved across different locomotion techniques~\cite{10.1109}.
 
-Non-humanoid avatar embodiment has explored diverse forms including animals~\cite{10.1111/jcc4.12173, 10.1145/3611659.3617211}, plants~\cite{10.1038/s41598-022-05184-0}, and abstract shapes~\cite{LAN2023100020}, demonstrating human body schema plasticity. However, mapping human kinematics to non-human morphology presents unique challenges~\cite{10.1145/3544548.3581027, 10.1145/2485895.2485903}. Two factors have emerged as critical: \textit{avatar-locomotion congruence}---matched locomotion methods that improve avatar identification~\cite{11192101}---and \textit{physical posture}---body tracking approaches (full-body vs. half-body) that enable Illusion of Virtual Body Ownership (IVBO) with non-humanoid avatars~\cite{8848005}.
+Non-humanoid avatars extend embodiment beyond human-like bodies, including animals~\cite{10.1111/jcc4.12173, 10.1145/3611659.3617211}, plants~\cite{10.1038/s41598-022-05184-0}, and abstract shapes~\cite{LAN2023100020}, demonstrating the plasticity of the human body schema and even eliciting Proteus effects. However, mapping human kinematics onto non-human morphology is non-trivial~\cite{10.1145/3544548.3581027, 10.1145/2485895.2485903}: full-body control of non-humanoid avatars can be fatiguing~\cite{10.1145/2380116.2380171}, and gesture-based locomotion trades increased immersion for higher physical load~\cite{10.1145/3756884.3765970}. Within this space, two factors have emerged as particularly important for non-humanoid embodiment: \textit{avatar-locomotion congruence} and \textit{physical posture}. Khan et al.~\cite{11192101} showed that locomotion methods that are congruent with the avatar (e.g., gorilla with arm-rolling, human with arm-swinging) improve avatar identification and user experience, while Krekhov et al.~\cite{8848005} demonstrated that half-body tracking can sustain body ownership for non-humanoid avatars with less strain than full-body tracking, and that body ownership correlates with game enjoyment~\cite{10.1145/3311350.3347172}.
 
-This research investigates the interaction between physical posture and avatar-locomotion congruence through bear avatar locomotion.
-
-\section{Related Work}
-
-VR embodiment illusions arise from the match between predicted motor states and sensory input~\cite{10.3389/fpsyg.2017.01125}. SoBO and SoA are functionally dissociable~\cite{10.3389/fnhum.2012.00040}, and visuomotor synchrony alone can induce body ownership~\cite{10.1371/journal.pone.0010381}. Agency matters more than avatar visibility~\cite{8446229}, and comparable embodiment is achieved regardless of locomotion method~\cite{10.1109/ISMAR50242.2020.00070}.
-
-Non-humanoid avatar research has explored animals~\cite{10.1111/jcc4.12173, 10.1145/3611659.3617211} and plants~\cite{10.1038/s41598-022-05184-0}, demonstrating body schema plasticity. Non-humanoid avatars also induce the Proteus effect~\cite{LAN2023100020}. However, mapping to non-human morphology is non-trivial~\cite{10.1145/2485895.2485903}, and full-body non-human avatar control causes substantial fatigue~\cite{10.1145/2380116.2380171}.
-
-Two factors are critical for non-humanoid embodiment: avatar-locomotion congruence and physical posture. Khan et al.~\cite{11192101} showed that congruent conditions (gorilla with arm-rolling, human with arm-swinging) significantly improved avatar identification and user experience through matched locomotion methods. However, users maintained upright posture throughout---physical postural changes were not examined. Independently, Krekhov et al.~\cite{8848005} compared full-body (FB) versus half-body (HB) tracking with non-humanoid avatars (bat, tiger, spider), finding that 1:1 mapping is not a prerequisite for IVBO. FB mode for quadrupedal avatars caused substantial fatigue, while HB maintained IVBO with reduced strain. A subsequent study~\cite{10.1145/3311350.3347172} confirmed IVBO correlates with game enjoyment.
-
-These studies independently demonstrate the importance of avatar-locomotion congruence and physical posture, but their interaction during active locomotion remains unexplored. This research integrates Khan et al.'s ``avatar-locomotion congruence'' and Krekhov et al.'s ``body tracking'' frameworks to examine whether pseudo-quadrupedal posture amplifies congruent locomotion effects on IVBO. Prior work focused on static or semi-static postural alignment; we extend this to dynamic locomotion context.
+These studies highlight avatar-locomotion congruence and physical posture as key ingredients for non-humanoid embodiment, yet they have largely been examined in isolation and mostly with users in standing posture. The interaction of these factors during active locomotion with a quadrupedal avatar therefore remains underexplored. In this demo, we investigate this interaction using a brown bear avatar and a $2 \times 2$ design that systematically varies physical posture (standing vs.\ pseudo-quadrupedal) and locomotion method (human arm-swinging vs.\ avatar-congruent quadrupedal rowing). Our research question is: \textit{Does pseudo-quadrupedal posture amplify the effects of avatar-congruent locomotion on avatar embodiment compared to standing posture during active movement?}
 
 \section{Bear Experience}
 
 \subsection{Avatar Selection Rationale}
 
-We selected \textit{Ursus arctos} (brown bear) based on biomechanical compatibility with human input. Bears exhibit plantigrade gait where the entire sole contacts the ground~\cite{10.1242/jeb.121806}, enabling intuitive hand-to-forelimb mapping. During quadrupedal locomotion, bear forelimbs support 54--60\% of body weight and generate greater braking forces than hindlimbs across all speeds~\cite{10.1242/jeb.121806}. This justifies forelimb-only control for essential quadrupedal motion patterns. Bears demonstrate 70--80 degrees of forearm pronation-supination mobility, with maximum pronation aligning with normal ground contact~\cite{amaike2021}. Human hands held palm-down directly correspond to bear ground contact posture. The shoulder height variation between subadults (approximately 60cm) and adults (90--150cm) accommodates both pseudo-quadrupedal and upright human eye heights.
+We selected \textit{Ursus arctos} (brown bear) on the basis of biomechanical compatibility with human input. Bears exhibit a plantigrade gait in which the entire sole contacts the ground~\cite{10.1242/jeb.121806}, allowing intuitive hand-to-forelimb mapping. During quadrupedal locomotion, the forelimbs of the bear support 54--60\% of body weight and generate greater braking forces than the hindlimbs at all speeds~\cite{10.1242/jeb.121806}. This justifies forelimb-only control for essential quadrupedal motion patterns. Bears demonstrate 70--80 degrees of forearm pronation-supination mobility, with maximum pronation aligning with normal ground contact~\cite{amaike2021}. Human hands held palm-down directly correspond to bear ground contact posture. The shoulder height variation between subadults (approximately 60cm) and adults (90--150cm) accommodates both pseudo-quadrupedal and standing human eye heights.
 
-\subsection{Experimental Conditions}
+\subsection{Demo Trials}
 
-Our system implements a $2 \times 2$ within-subjects design on Meta Quest 3:
+Our demo presents a $2 \times 2$ set of posture-locomotion demo trials on Meta Quest 3 that visitors can experience:
 
 \begin{itemize}
-\item \textbf{C1 (quad-rowing):} Pseudo-quadrupedal posture (forward lean, approximately 90 degree hip angle) with bear-like rowing locomotion. Viewpoint at 0.7m (subadult bear height).
-\item \textbf{C2 (quad-swinging):} Pseudo-quadrupedal posture with human arm-swinging locomotion.
-\item \textbf{C3 (stand-rowing):} Upright posture with bear-like rowing. Viewpoint at 1.6m (adult bear height).
-\item \textbf{C4 (stand-swinging):} Upright posture with human arm-swinging.
+\item \textbf{C1 (stand-swinging):} Standing posture with human arm-swinging. Viewpoint at 1.6m (adult bear height).
+\item \textbf{C2 (stand-rowing):} Standing posture with bear-like rowing locomotion.
+\item \textbf{C3 (quad-swinging):} Pseudo-quadrupedal posture with (approximately 90 degree hip angle) human arm-swinging locomotion. Viewpoint at 0.7m (subadult bear height).
+\item \textbf{C4 (quad-rowing):} Pseudo-quadrupedal posture with bear-like rowing locomotion.
 \end{itemize}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figure/condition}
+\caption{Four posture--locomotion demo trials. A) C1 (stand-swinging): standing posture with human arm-swinging. B) C2 (stand-rowing): standing posture with bear-like rowing. C) C3 (quad-swinging): pseudo-quadrupedal posture with human arm-swinging. D) C4 (quad-rowing): pseudo-quadrupedal posture with bear-like rowing.}
+  \Description{A grid of 20 images arranged in 4 rows and 5 columns. Each row shows a different demo trial with sequential movement frames demonstrating the locomotion technique. The images show human participants performing different combinations of posture (quadrupedal vs standing) and locomotion method (rowing vs arm-swinging).}
+  \label{fig:conditions}
+\end{figure*}
 
 \subsection{Locomotion Implementation}
 
@@ -120,15 +165,24 @@ The IK system incorporates pole vector constraints. Bear forelimbs operate prima
 \end{equation}
 This ensures biologically plausible forelimb trajectories regardless of user arm position.
 
+\section{Discussion}
+
+Preliminary observations from 19 participants support our hypothesis. The majority (11/19) preferred quad-rowing (C4), reporting that posture-locomotion congruence felt more natural---aligning with Gonzalez-Franco and Lanier's~\cite{10.3389/fpsyg.2017.01125} prediction-sensory correspondence model. However, 6/19 preferred standing rowing (C3), noting that `` standing felt slower and more bear-like, suggesting that avatar movement congruence alone contributes to embodiment~\cite{10.3389/fnhum.2012.00040, 8848005}.
+
+Pseudo-quadrupedal posture enhanced grounding sensation, possibly providing stronger physical plausibility~\cite{10.1145/3544548.3580979}, while standing reduced body ownership despite accurate viewpoint mapping. However, pseudo-quadrupedal posture induced fatigue, in congruence with findings that gesture-based locomotion providing higher presence also induces greater physical load~\cite{10.1145/3756884.3765970}, indicating the need for support mechanisms in extended experiences.
+
 \section{Conclusion}
 
-We presented a VR system for investigating the interaction between physical posture and avatar-locomotion congruence in quadrupedal avatar embodiment. The system implements a $2 \times 2$ design combining two postures (upright vs. pseudo-quadrupedal) with two locomotion methods (incongruent arm-swinging vs. congruent quadrupedal rowing). This approach integrates Khan et al.'s~\cite{11192101} avatar-locomotion congruence framework with Krekhov et al.'s~\cite{8848005} body tracking findings for non-humanoid IVBO, extending embodiment research from static postural alignment to dynamic locomotion contexts.
+We presented a VR system addressing the research question of whether pseudo-quadrupedal posture amplifies congruent locomotion effects on avatar embodiment. Preliminary findings suggest an affirmative answer: participants preferred the posture-locomotion congruent condition and reported enhanced embodiment in pseudo-quadrupedal posture with congruent rowing motion. Our contribution --integrating avatar-locomotion congruence and body tracking frameworks into a $2 \times 2$ design for dynamic locomotion -- revealed that these factors likely interact rather than operate independently, extending previous static alignment research. Future work will conduct controlled experiments to quantify this interaction effect and develop support mechanisms~\cite{10.1145/3544548.3580979} that sustain postural congruence while mitigating fatigue.
 
-Future work will conduct controlled experiments to quantify how pseudo-quadrupedal posture moderates congruent locomotion effects on IVBO, and explore support mechanisms that maintain postural congruence while reducing physical strain~\cite{10.1145/3544548.3580979}.
-
-\section{Acknowledgments}
-
-This work was supported by [ANONYMOUS FOR REVIEW]. We thank [ANONYMOUS] for their assistance in system development and pilot testing.
+%%
+%% The acknowledgments section is defined using the "acks" environment
+%% (and NOT an unnumbered section). This ensures the proper
+%% identification of the section in the article metadata, and the
+%% consistent spelling of the heading.
+\begin{acks}
+Acknowledgements go here. Delete enclosing begin/end markers if there are no acknowledgements.
+\end{acks}
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{reference}
